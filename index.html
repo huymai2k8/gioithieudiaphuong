@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chào mừng đến với Bến Tre</title>
+        <link rel="stylesheet" href="style.css">
+        <head>
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+    </head>
+
+    <body class="body">
+
+        <section id="content1" class="content1">
+            <h1 id="text1" class="text1">Du lịch Bến Tre</h1>
+            <h2 id="text1" class="text1">Bến Tre, miền quê bình yên rợp bóng dừa xanh là một trong những địa điểm lý tưởng cho những ai muốn cảm nhận sự thư thái, rời xa phồn hoa đô thị về với vùng đất miệt vườn. Cùng khám phá những điểm tham quan nổi tiếng nhất mà đã đến Bến Tre là phải đi cho bằng được dưới đây nhé!</h2>
+            <button id="btn1" class="btn1" onclick="dulich()">See more</button>
+        </section>
+        <section id="content2" class="content2">
+            <h1 id="text2" class="text2">Đặc sản Bến Tre</h1>
+            <h2 id="text2" class="text2">Bến Tre vốn nổi tiếng với những rặng dừa xanh mát, những địa điểm vui chơi đầy thú vị và đặc biệt là đặc sản Bến Tre gây thương nhớ thực khách với các món ăn đa dạng, đầy hấp dẫn. </h2>
+            <button id="btn2" class="btn2" onclick="dacsan()">See more</button>
+        </section>
+        <section id="content3" class="content3">
+            <h1 id="text3" class="text3">Các làng nghề truyền thống</h1>
+            <h2 id="text3" class="text3">Những làng nghề truyền thống Bến Tre không chỉ là nguồn thu nhập mà còn là bảo tồn văn hóa độc đáo, làm say đắm du khách mỗi chuyến thăm.</h2>
+            <button id="btn3" class="btn3" onclick="langnghe()">See more</button>
+        </section>
+    </body>
+    <script>
+        const first = window.innerHeight /2;
+        const second = window.innerHeight + first;
+        myFunction();
+        window.onscroll = function() {myFunction()};
+
+        function myFunction() {
+        if (document.documentElement.scrollTop < first) {
+            document.getElementById("content1").classList.add('show');
+            document.getElementById("btn1").classList.add('show');
+            const a = document.querySelectorAll('.text1');
+            for (let i = 0; i < a.length; i++) {
+                a[i].classList.add('show');
+            }
+            try {
+                const b = document.querySelectorAll('.text2');
+                for (let i = 0; i < b.length; i++) {
+                    b[i].classList.remove('show');
+                }
+            }
+            catch(err){}
+            try {
+                document.getElementById("content2").classList.remove('show');
+            }
+            catch(err){}
+            try {
+                document.getElementById("btn2").classList.remove('show');
+            }
+            catch(err){}
+        }
+        if (document.documentElement.scrollTop > first && document.documentElement.scrollTop < second ) {
+            document.getElementById("content2").classList.add('show');
+            document.getElementById("btn2").classList.add('show');
+            const b = document.querySelectorAll('.text2');
+            for (let i = 0; i < b.length; i++) {
+                b[i].classList.add('show');
+            }
+            document.getElementById("content1").classList.remove('show');
+            document.getElementById("btn1").classList.remove('show');
+            const a = document.querySelectorAll('.text1');
+            for (let i = 0; i < a.length; i++) {
+                a[i].classList.remove('show');
+            }
+
+            try {
+                document.getElementById("content3").classList.remove('show');
+            }
+            catch(err){}
+            try {
+                document.getElementById("btn3").classList.remove('show');
+            }
+            catch(err){}
+            const c = document.querySelectorAll('.text3');
+            for (let i = 0; i < c.length; i++) {
+                try {
+                    c[i].classList.remove('show');
+                }
+                catch(err){}
+            }
+        }
+        if (document.documentElement.scrollTop > second) {
+            document.getElementById("content3").classList.add('show');
+            document.getElementById("btn3").classList.add('show');
+            const a = document.querySelectorAll('.text3');
+            for (let i = 0; i < a.length; i++) {
+                a[i].classList.add('show');
+            }
+            document.getElementById("content2").classList.remove('show');
+            document.getElementById("btn2").classList.remove('show');
+            a = document.querySelectorAll('.text2');
+            for (let i = 0; i < a.length; i++) {
+                a[i].classList.remove('show');
+            }
+        }
+        }
+    </script>
+</html>
