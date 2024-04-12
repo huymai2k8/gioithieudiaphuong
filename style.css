@@ -59,12 +59,12 @@ li{
     transform: translate(0px,50px);
     transition: all 2s;
     text-shadow: 1px 1px black;
-    width: 50%;
+    width: 60%;
     margin-left: 15%;
 }
 .content1 h1{
     margin-top: -0px;
-    font-size: 300%;
+    font-size: 280%;
     padding-top: 22%;
 }
 .content1 h2{
@@ -124,13 +124,13 @@ li{
     transform: translate(0px,50px);
     transition: all 2s;
     text-shadow: 1px 1px black;
-    width: 50%;
+    width: 60%;
     margin-left: 25%;
 }
 .content2 h1{
     
     padding-top: 22%;
-    font-size: 300%;
+    font-size: 280%;
 }
 .content2 h2{
     
@@ -190,13 +190,13 @@ li{
     transform: translate(0px,50px);
     transition: all 2s;
     text-shadow: 1px 1px black;
-    width: 50%;
+    width: 60%;
     margin-left: 15%;
 }
 .content3 h1{
     
     padding-top: 25%;
-    font-size: 300%;
+    font-size: 280%;
 }
 .content3 h2{
 
